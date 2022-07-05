@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="default.css">
+
+    <link id="theme-style" rel="stylesheet" href="">
 </head>
 <body>
     
@@ -41,10 +43,10 @@
                     <h5 style="text-align: center; line-height: 0;">Personalize Theme</h5>
 
                     <div id="theme-options-wrapper">
-                        <div id="light-mode" class="theme-dot"></div>
-                        <div id="blue-mode" class="theme-dot"></div>
-                        <div id="green-mode" class="theme-dot"></div>
-                        <div id="purple-mode" class="theme-dot"></div>
+                        <div data-mode="light" id="light-mode" class="theme-dot"></div>
+                        <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+                        <div data-mode="green" id="green-mode" class="theme-dot"></div>
+                        <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
                     </div>
                     <p id="settings-note">*Theme settings will be saved for<br> your next visit</p>
                 </div>
@@ -127,16 +129,34 @@
 
             <div class="post-wrapper">
                 <div class="post">
-                    <img src="#" alt="p1">
+                    <img class="thumbnail" src="tower-of-hanoi-start.jpg" alt="Playing tower of Hanoi">
 
                     <div class="post-preview">
-                        
+                        <h6 class="post-title">Tower of Hanoi</h6>
+                        <p class="post-intro">My first JavaScript game: Tower of Hanoi.</p>
+                        <a href="#">Read More</a>
                     </div>
                 </div>
 
-                <div class="post"></div>
+                <div class="post">
+                    <img class="thumbnail" src="tower-of-hanoi-moving.jpg" alt="Playing tower of Hanoi">
 
-                <div class="post"></div>
+                    <div class="post-preview">
+                        <h6 class="post-title">Post Title</h6>
+                        <p class="post-intro">My first JavaScript game: Tower of Hanoi</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <img class="thumbnail" src="tower-of-hanoi-moving.jpg" alt="Playing tower of Hanoi">
+
+                    <div class="post-preview">
+                        <h6 class="post-title">Post Title</h6>
+                        <p class="post-intro">This is a sentence.  Some more filler text.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -163,5 +183,6 @@
         </div>
     </section>
 
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
