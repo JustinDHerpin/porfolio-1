@@ -1,7 +1,8 @@
-console.log("it's working!");
+//  JS For Switching Themes
 
 let themeDots = document.getElementsByClassName("theme-dot");
 
+//  Maybe try to write a forEach loop here instead?
 for (var i = 0; themeDots.length > i; i++) {
   themeDots[i].addEventListener("click", function () {
     let mode = this.dataset.mode;
@@ -9,6 +10,15 @@ for (var i = 0; themeDots.length > i; i++) {
     setTheme(mode);
   });
 }
+
+// First attempt at forEach loop to add event listeners
+// themeDots.foreach(
+//   addEventListener("click", function () {
+//     let mode = this.dataset.mode;
+//     console.log("theme-dot clicked: ", mode);
+//     setTheme(mode);
+//   })
+// );
 
 function setTheme(mode) {
   if (mode == "light") {
@@ -26,4 +36,8 @@ function setTheme(mode) {
   if (mode == "purple") {
     document.getElementById("theme-style").href = "purple.css";
   }
+}
+
+function setMode(mode) {
+  document.get;
 }
