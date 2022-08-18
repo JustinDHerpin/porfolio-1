@@ -6,7 +6,6 @@ let themeDots = document.getElementsByClassName("theme-dot");
 for (var i = 0; themeDots.length > i; i++) {
   themeDots[i].addEventListener("click", function () {
     let mode = this.dataset.mode;
-    console.log("theme-dot clicked: ", mode);
     setTheme(mode);
   });
 }
@@ -41,3 +40,15 @@ function setTheme(mode) {
 function setMode(mode) {
   document.get;
 }
+
+// let contactFocus = document.getElementById('contact-top')
+//   .addEventListener('click', function (e) {
+//     e.preventDefault()
+//     let formDiv = document.getElementById('form-div')
+//     let body = document.getElementsByTagName('body')
+//     .animate( { scrollTop: $ })
+// })
+
+// document.getElementById("contact-top").addEventListener("click", () => {
+//   document.getElementById("form-div").focus();
+// });
