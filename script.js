@@ -1,5 +1,13 @@
-//  JS For Switching Themes
+//  Grab theme from Local Storage
+let colorTheme = localStorage.getItem("colorTheme");
 
+if (colorTheme == null) {
+  setTheme("light");
+} else {
+  setTheme(colorTheme);
+}
+
+//  JS For Switching Themes
 let themeDots = document.getElementsByClassName("theme-dot");
 
 //  Maybe try to write a forEach loop here instead?
@@ -10,15 +18,6 @@ for (var i = 0; themeDots.length > i; i++) {
   });
 }
 
-// First attempt at forEach loop to add event listeners
-// themeDots.foreach(
-//   addEventListener("click", function () {
-//     let mode = this.dataset.mode;
-//     console.log("theme-dot clicked: ", mode);
-//     setTheme(mode);
-//   })
-// );
-
 function setTheme(mode) {
   if (mode == "light") {
     document.getElementById("theme-style").href = "default.css";
@@ -28,27 +27,15 @@ function setTheme(mode) {
     document.getElementById("theme-style").href = "dark.css";
   }
 
-  if (mode == "green") {
-    document.getElementById("theme-style").href = "green.css";
-  }
-
-  if (mode == "purple") {
-    document.getElementById("theme-style").href = "purple.css";
-  }
+  //  Set colorTheme in Local Storage
+  localStorage.setItem("colorTheme", mode);
 }
 
-function setMode(mode) {
-  document.get;
-}
-
-// let contactFocus = document.getElementById('contact-top')
-//   .addEventListener('click', function (e) {
-//     e.preventDefault()
-//     let formDiv = document.getElementById('form-div')
-//     let body = document.getElementsByTagName('body')
-//     .animate( { scrollTop: $ })
-// })
-
-// document.getElementById("contact-top").addEventListener("click", () => {
-//   document.getElementById("form-div").focus();
-// });
+// First attempt at forEach loop to add event listeners
+// themeDots.foreach(
+//   addEventListener("click", function () {
+//     let mode = this.dataset.mode;
+//     console.log("theme-dot clicked: ", mode);
+//     setTheme(mode);
+//   })
+// );

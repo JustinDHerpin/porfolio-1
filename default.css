@@ -115,8 +115,13 @@ h6 { font-size: 16px;}
 
 #navigation li {
     display: inline-block;
+    padding-right: 10px;
     margin-right: 5px;
     margin-left: 5px;
+}
+
+#navigation li:not(:last-child, :first-child) {
+    border-right: solid 1px #fff;
 }
 
 .dots-wrapper {
@@ -200,14 +205,6 @@ h6 { font-size: 16px;}
     background-color: #192734;
 }
 
-#green-mode {
-    background-color: #78866b;
-}
-
-#purple-mode {
-    background-color: #7E4C74;
-}
-
 #settings-note {
     font-size: 12px;
     font-style: italic;
@@ -239,38 +236,6 @@ h6 { font-size: 16px;}
     border: 1.5px solid #17a2b8;
     background-color: var(--previewBg);
     padding: 15px;
-
-}
-
-.corner {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    border: 1.5px solid #17a2b8;
-    background-color: #fff;
-    position: absolute;
-}
-
-#corner-tl {
-    top: -5px;
-    left: -5px;
-}
-
-#corner-tr {
-    top: -5px;
-    right: -5px;
-
-}
-
-#corner-br {
-    bottom: -5px;
-    right: -5px;
-
-}
-
-#corner-bl {
-    bottom: -5px;
-    left: -5px;
 }
 
 .about-wrapper {
@@ -289,12 +254,6 @@ h6 { font-size: 16px;}
     display: flex;
     justify-content: space-evenly;
     background-color: var(--previewShadow);
-}
-
-.social-links {
-    display: grid;
-    align-content: center;
-    text-align: center;
 }
 
 .post-wrapper {
@@ -385,6 +344,10 @@ h6 { font-size: 16px;}
 }
 
 @media screen and (max-width: 800px) {
+    h1 { font-size: 45px;}
+    h3 { font-size: 22px;}
+    p { font-size: 10px;}
+
     .intro-wrapper {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -396,5 +359,22 @@ h6 { font-size: 16px;}
 
     .right-column {
         justify-content: center;
+        padding-bottom: 115px;
+    }
+
+    #preview-shadow {
+        width: 250px;
+        margin-left: -38px;
+    }
+
+    #preview {
+        width: 250px;
+
+    }
+
+    #skills {
+        display: block;
+        padding: 8px 0 8px 0;
+        text-align: center;
     }
 }
