@@ -104,13 +104,10 @@ h6 { font-size: 16px;}
     background-color: var(--mainColor);
 }
 
-#navigation a {
-    color: var(--mainText)
-}
-
 #navigation {
     margin: 0;
     padding: 10px;
+    font-size: 15px;
 }
 
 #navigation li {
@@ -118,10 +115,15 @@ h6 { font-size: 16px;}
     padding-right: 10px;
     margin-right: 5px;
     margin-left: 5px;
+    /* font-size: 15px; */
 }
 
 #navigation li:not(:last-child, :first-child) {
     border-right: solid 1px #fff;
+}
+
+#navigation a {
+    color: var(--mainText);
 }
 
 .dots-wrapper {
@@ -240,10 +242,8 @@ h6 { font-size: 16px;}
 
 .about-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) ;
     padding-top: 50px;
-    padding-bottom: 50px;
-    gap: 100px;
+    padding-bottom: 78px;
 }
 
 .about-wrapper h4, a {
@@ -254,6 +254,11 @@ h6 { font-size: 16px;}
     display: flex;
     justify-content: space-evenly;
     background-color: var(--previewShadow);
+}
+
+#projects-wrapper {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .post-wrapper {
@@ -296,6 +301,10 @@ h6 { font-size: 16px;}
 
 
 /* Contact Form */
+#email-header {
+    text-align: center;
+    margin: 75px 0 60px 0;
+}
 
 #contact-form {
     display: block;
@@ -355,6 +364,10 @@ h6 { font-size: 16px;}
             'left-column'
             'right-column'
         ;
+    }
+
+    #navigation {
+        padding: 10px 10px 10px 40px;
     }
 
     .right-column {
